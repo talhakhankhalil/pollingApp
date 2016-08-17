@@ -14,3 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware'=>['auth']], function(){
+
+
+
+    Route::resource('poll','pollController');
+    Route::resource('newsfeed','newsFeedController');
+    Route::get('shownewsfeed','newsfeedjson@show_all_news_feed');
+
+
+});
+
+Route::get('/login', function(){
+    return view('login');
+});
+Route::post('login','userController@postLogin');
+
+
+
+
+
+
