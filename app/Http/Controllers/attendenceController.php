@@ -17,7 +17,12 @@ class attendenceController extends Controller
     public function index()
     {
         //
-        return "Its Working";
+        $attendence = Attendence::all();
+        if ( count($attendence) > 0){
+        return view('attendence.index', compact('attendence'));
+        }else{
+            return " Error :: Data not found";
+        }
     }
 
     /**
@@ -40,6 +45,15 @@ class attendenceController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+              
+              
+              'sno' => 'required',
+              'session' => 'required',
+               'date_of_attendence' => 'required',
+               'attendence' => 'required'
+            ]);
+        
         Attendence::create($request->all());
          return redirect('attendence');
         
@@ -95,9 +109,9 @@ class attendenceController extends Controller
         //
         $attendence_single = Attendence::where('sno','=',$id)->get();
         if (count($attendence_single) > 0){
-             echo json_encode($attendence_single );
+             return json_encode($attendence_single );
         }else {
-            echo "Error :: Key not found";
+           return json_encode("Error :: Key not found.");
         }      
     }    
 }

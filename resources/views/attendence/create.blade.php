@@ -30,11 +30,34 @@
                                <br>
                                <label>Attendence</label>
                                <input name="attendence" type="text" class="form-control" />
-                               <button type="submit" class="btn btn-success">Submit</button>
+                               <button  style="margin-top:20px;" type="submit" class="btn btn-success">Submit</button>
                                </form>
                                <br>
                            </div>
-                           <div class="col-sm-4"></div>
+                           <div class="col-sm-4">
+                               
+                              
+
+ @if(count($errors) > 0)
+
+    <div class="alert alert-danger">
+ 
+        <ul>
+        @foreach($errors->all() as $error)
+        
+                <li>{{$error}}</li>
+
+        @endforeach
+            </ul>
+    </div>
+
+
+
+@endif
+    
+                               
+                               
+                           </div>
                        </div>
                        <div style="padding:20px 0px"></div>
                        <div class="row">

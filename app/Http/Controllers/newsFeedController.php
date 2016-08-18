@@ -19,8 +19,11 @@ class newsFeedController extends Controller
         //
         
         $news_feeds = Newsfeed::all();
+        if (count($news_feeds) > 0){
         return view('newsfeed.index', compact('news_feeds'));
-        
+        }else{
+            return "Data not found in the database";
+        }
         
     }
 

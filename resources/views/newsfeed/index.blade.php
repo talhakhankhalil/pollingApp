@@ -19,6 +19,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                  
+                  <?php 
+                    if (count($news_feeds)>0){
+                    
+                  ?>
                    
                    @foreach($news_feeds as $news_feed)
                     <tr>
@@ -28,7 +33,13 @@
                         <td><button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#myModalDelete"><i class="fa fa-remove" style="padding-right:5px"></i>Delete</button></td>
                         <td><a href="{{route('newsfeed.show',$news_feed->id)}}"><button type="button" class="btn btn-success"><i class="fa fa-eye" style="padding-right:5px"></i>View</button></a></td>
                     </tr>
-                   @endforeach 
+                   @endforeach
+                   <?php
+                    }else{ 
+                        echo "Data not found in database";
+                    ?>
+                   <?php } ?>
+                 ?>
                 </tbody>
             </table>
         </div>
