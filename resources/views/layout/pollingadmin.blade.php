@@ -166,7 +166,10 @@
                             <a href="{{route('newsfeed.index')}}"><i class="fa fa-fw fa-edit"></i>News Feed</a>
                         </li>
                         <li>
-                            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
+                            <a href="{{route('attendence.index')}}"><i class="fa fa-fw fa-edit"></i>Show Attendence</a>
+                        </li>
+                         <li>
+                            <a href="{{route('attendence.create')}}"><i class="fa fa-fw fa-edit"></i>Create Attendence</a>
                         </li>
                         <li>
                             <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
@@ -198,7 +201,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 page-header">
-                            <h2>Polls</h2>
+                            
                         </div>
                     </div>
 

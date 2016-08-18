@@ -24,15 +24,21 @@ Route::group(['middleware'=>['auth']], function(){
 
     Route::resource('poll','pollController');
     Route::resource('newsfeed','newsFeedController');
+     
+    
+    Route::resource('attendence','attendenceController');
+    
+    Route::resource('attend/single/{id}','attendenceController@show_attendence_json');
+    
     Route::get('shownewsfeed','newsfeedjson@show_all_news_feed');
 
 
 });
 
-Route::get('/login', function(){
-    return view('login');
-});
-Route::post('login','userController@postLogin');
+//Route::get('/login', function(){
+//    return view('login');
+//});
+//Route::post('login','userController@postLogin');
 
 
 

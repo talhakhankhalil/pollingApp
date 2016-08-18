@@ -34,7 +34,7 @@
 
     </head>
 
-    <body>
+    <body style="background-color:#fff;">
 
 
         <div class="container-fluid">
@@ -51,12 +51,12 @@
 
                                 <div class="input">
                                     <input  name="email" type="email" placeholder="Email" required />
-<!--                                    <span><i class="fa fa-envelope-o"></i></span>-->
+                                    <span><i class="fa fa-envelope-o"></i></span>
                                 </div>
 
                                 <div class="input">
                                     <input name="password" type="password" placeholder="Password" required />
-<!--                                    <span><i class="fa fa-lock"></i></span>-->
+                                    <span><i class="fa fa-lock"></i></span>
                                 </div>
 
                                 <button type="submit" class="submit"><i class="fa fa-long-arrow-right"></i></button>
