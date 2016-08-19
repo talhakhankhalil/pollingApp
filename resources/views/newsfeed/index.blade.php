@@ -20,10 +20,7 @@
                 </thead>
                 <tbody>
                   
-                  <?php 
-                    if (count($news_feeds)>0){
-                    
-                  ?>
+                
                    
                    @foreach($news_feeds as $news_feed)
                     <tr>
@@ -34,12 +31,6 @@
                         <td><a href="{{route('newsfeed.show',$news_feed->id)}}"><button type="button" class="btn btn-success"><i class="fa fa-eye" style="padding-right:5px"></i>View</button></a></td>
                     </tr>
                    @endforeach
-                   <?php
-                    }else{ 
-                        echo "Data not found in database";
-                    ?>
-                   <?php } ?>
-                 ?>
                 </tbody>
             </table>
         </div>

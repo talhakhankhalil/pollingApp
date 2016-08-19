@@ -77,7 +77,11 @@ class newsFeedController extends Controller
     {
         //
          $newsfeed = Newsfeed::findOrFail($id);
+        if ( count($newsfeed) > 0){
          return view('newsfeed.show',compact('newsfeed'));
+        }else {
+            return "Error :: Data not found";
+        }
         
     }
 

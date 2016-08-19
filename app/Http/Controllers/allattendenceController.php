@@ -102,7 +102,7 @@ class allattendenceController extends Controller
     public function show_attendence_json($id)
     {
         //
-        $attendence_single = Allattendence::where('sno','=',$id)->get();
+        $attendence_single = Allattendence::where('sno','=',$id)->select('session','total_presents','total_absents')->get();
         if (count($attendence_single) > 0){
              return json_encode($attendence_single );
         }else {
