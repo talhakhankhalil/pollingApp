@@ -171,6 +171,9 @@
                          <li>
                             <a href="{{route('attendence.create')}}"><i class="fa fa-fw fa-edit"></i>Create Attendence</a>
                         </li>
+                         <li>
+                            <a href="{{route('allattendence.create')}}"><i class="fa fa-fw fa-edit"></i>Create all Attendence</a>
+                        </li>
                         <li>
                             <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
                         </li>

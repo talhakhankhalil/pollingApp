@@ -177,6 +177,9 @@
                          <li>
                             <a href="{{route('attendence.create')}}"><i class="fa fa-fw fa-edit"></i>Create Attendence</a>
                         </li>
+                         <li>
+                            <a href="{{route('allattendence.create')}}"><i class="fa fa-fw fa-edit"></i>Create all Attendence</a>
+                        </li>
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="demo" class="collapse">
