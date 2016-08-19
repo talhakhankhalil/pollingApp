@@ -27,8 +27,9 @@ Route::group(['middleware'=>['auth']], function(){
      
     
     Route::resource('attendence','attendenceController');
+    Route::resource('allattendence','allattendenceController');
     
-    Route::resource('attend/single/{id}','attendenceController@show_attendence_json');
+    Route::resource('attend/single/{id}','allattendenceController@show_attendence_json');
     
     Route::get('shownewsfeed','newsfeedjson@show_all_news_feed');
 
