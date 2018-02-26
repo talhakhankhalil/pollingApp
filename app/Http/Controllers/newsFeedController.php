@@ -48,6 +48,15 @@ class newsFeedController extends Controller
     {
         //
         
+        $this->validate($request,[
+              
+              
+               'title' => 'required',
+               'priority' => 'required',
+               'date_of_newsfeed' => 'required',
+               'content' => 'required',
+            ]);
+        
         $newsfeed = new Newsfeed;
         
         $newsfeed->title = $request->title;

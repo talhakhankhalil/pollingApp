@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::auth();
 Route::get('/home', 'HomeController@index');
 
+Route::get('/logout','userController@userlogout');
+
 Route::group(['middleware'=>['auth']], function(){
 
 
@@ -28,20 +30,21 @@ Route::group(['middleware'=>['auth']], function(){
     
     Route::resource('attendence','attendenceController');
     Route::resource('allattendence','allattendenceController');
-    
-    Route::resource('attend/single/{id}','allattendenceController@show_attendence_json');
-    
     Route::get('shownewsfeed','newsfeedjson@show_all_news_feed');
+    
+    
+    Route::resource('single/{id}','allattendenceController@show_attendence_json');
+    
+    
+   
 
 
 });
 
-//Route::get('/login', function(){
-//    return view('login');
-//});
-//Route::post('login','userController@postLogin');
+//Route::resource('/login','userController');
+//Route::resource('login','userController@postLogin');
 
-
+ 
 
 
 

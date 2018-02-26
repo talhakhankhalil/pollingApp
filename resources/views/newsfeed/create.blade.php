@@ -30,9 +30,33 @@
                                <br>
                                <label>Content</label>
                                <textarea name="content" class="form-control" ></textarea>
-                               <button type="submit" class="btn btn-success">Create News Feed</button>
+                               <button style="margin-top:20px;" type="submit" class="btn btn-success">Create News Feed</button>
                                </form>
                                <br>
+                           </div>
+                               <div class="col-sm-3">
+                               
+                              
+
+ @if(count($errors) > 0)
+
+    <div class="alert alert-danger">
+ 
+        <ul>
+        @foreach($errors->all() as $error)
+        
+                <li>{{$error}}</li>
+
+        @endforeach
+            </ul>
+    </div>
+
+
+
+@endif
+    
+                               
+                               
                            </div>
                            <div class="col-sm-4"></div>
                        </div>

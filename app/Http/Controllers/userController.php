@@ -38,6 +38,7 @@ class userController extends Controller
     public function create()
     {
         //
+        return view('login');
     }
 
     /**
@@ -94,5 +95,10 @@ class userController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function userlogout(){
+        Auth::logout();
+        return redirect('/login');
     }
 }
